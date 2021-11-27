@@ -7,10 +7,18 @@
   <title>Document</title>
 </head>
 <body>
-  <h3>You are not an Admin</h3>
- 
-  <button onClick=<%= helper.changeAdmin %>>Admin Login</button>
-  <p>`<%= helper.isAdmin %>`</p>
+  
+  <h2><%- (isAdmin) ? "WELCOME ADMIN": 'You are not an Admin' -%></h2>
+
+  <form action="/" method="POST">
+  <button type="submit" name="isAdmin" value=`<%= isAdmin ? false : true %>`>Admin Login</button>
+  </form>
+  <h3> Click the button to login as Admin </h3>
+  
+  <p><%= isAdmin ? `Congratulations now you can access '/admin/users' and '/admin/products' routes ` : "" %></p>
+
+  <h4> To logout reload the page</h4>
+  <p> Please Login as ADMIN to access <b><em>'/admin/users'  and '/admin/products'</em></b> routes</p>
 </body>
-<!-- <script src="../src/data.js"/> -->
+
 </html>
