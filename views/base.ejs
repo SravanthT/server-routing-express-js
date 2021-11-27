@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<body>
-  
-  <h2><%- (isAdmin) ? "WELCOME ADMIN": 'You are not an Admin' -%></h2>
+<body >
+  <div style="text-align: center; align-text: center;">
+  <h2 ><%- (isAdmin) ? "WELCOME ADMIN": 'You are not an Admin' -%></h2>
 
   <form action="/" method="POST">
   <button type="submit" name="isAdmin" value=`<%= isAdmin ? false : true %>`>Admin Login</button>
@@ -19,6 +19,7 @@
 
   <h4> To logout reload the page</h4>
   <p> Please Login as ADMIN to access <b><em>'/admin/users'  and '/admin/products'</em></b> routes</p>
+  </div>
 </body>
 
 </html>
